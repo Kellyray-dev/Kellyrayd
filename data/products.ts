@@ -1,0 +1,537 @@
+import { Product, Collection } from '@/types';
+
+export const products: Product[] = [
+  // Phone Accessories
+  {
+    id: 'pa-001',
+    slug: 'magsafe-wireless-charger-pro',
+    name: 'MagSafe Wireless Charger Pro',
+    shortDescription: 'Ultra-fast 15W magnetic wireless charging with precision alignment.',
+    description:
+      'Experience the future of charging with our MagSafe Wireless Charger Pro. Featuring ultra-fast 15W magnetic wireless charging technology with precision alignment, this charger snaps perfectly into place every time. The premium aluminum construction and minimalist design make it a stylish addition to any desk or nightstand. Compatible with all MagSafe-enabled devices.',
+    price: 49.99,
+    compareAtPrice: 69.99,
+    category: 'phone-accessories',
+    images: [
+      { src: 'https://picsum.photos/seed/charger1/600/600', alt: 'MagSafe Wireless Charger Pro front view' },
+      { src: 'https://picsum.photos/seed/charger2/600/600', alt: 'MagSafe Wireless Charger Pro side view' },
+      { src: 'https://picsum.photos/seed/charger3/600/600', alt: 'MagSafe Wireless Charger Pro in use' },
+    ],
+    tags: ['wireless', 'charging', 'magsafe', 'fast-charge'],
+    isBestseller: true,
+    rating: 4.8,
+    reviewCount: 342,
+    inStock: true,
+    features: [
+      '15W ultra-fast wireless charging',
+      'Precision magnetic alignment',
+      'Premium aluminum build',
+      'LED charging indicator',
+      'Compatible with MagSafe cases',
+      '1.5m braided cable included',
+    ],
+  },
+  {
+    id: 'pa-002',
+    slug: 'premium-leather-phone-case',
+    name: 'Premium Leather Phone Case',
+    shortDescription: 'Handcrafted genuine leather case with RFID-blocking technology.',
+    description:
+      'Elevate your phone protection with our Premium Leather Phone Case. Handcrafted from full-grain genuine leather, this case develops a beautiful patina over time while providing superior protection. Features RFID-blocking technology to keep your cards safe and a precise cutout design for all ports and buttons.',
+    price: 34.99,
+    compareAtPrice: 49.99,
+    category: 'phone-accessories',
+    images: [
+      { src: 'https://picsum.photos/seed/case1/600/600', alt: 'Premium Leather Phone Case - Black' },
+      { src: 'https://picsum.photos/seed/case2/600/600', alt: 'Premium Leather Phone Case - Brown' },
+      { src: 'https://picsum.photos/seed/case3/600/600', alt: 'Premium Leather Phone Case interior' },
+    ],
+    variants: {
+      type: 'Color',
+      options: [
+        { id: 'v-black', name: 'Color', value: 'Midnight Black', inStock: true },
+        { id: 'v-brown', name: 'Color', value: 'Cognac Brown', inStock: true },
+        { id: 'v-tan', name: 'Color', value: 'Desert Tan', inStock: true },
+        { id: 'v-navy', name: 'Color', value: 'Navy Blue', inStock: false },
+      ],
+    },
+    tags: ['leather', 'case', 'protection', 'premium'],
+    rating: 4.7,
+    reviewCount: 218,
+    inStock: true,
+    features: [
+      'Full-grain genuine leather',
+      'RFID-blocking technology',
+      'Drop protection up to 6ft',
+      'Slim profile design',
+      'Wireless charging compatible',
+      'Available in 4 colors',
+    ],
+  },
+  {
+    id: 'pa-003',
+    slug: 'crystal-clear-screen-protector',
+    name: 'Crystal Clear Screen Protector',
+    shortDescription: '9H hardness tempered glass with oleophobic coating.',
+    description:
+      'Keep your screen pristine with our Crystal Clear Screen Protector. Made from premium 9H hardness tempered glass, it provides military-grade protection against scratches and drops while maintaining the crystal-clear display quality you love. The oleophobic coating repels fingerprints and smudges.',
+    price: 19.99,
+    category: 'phone-accessories',
+    images: [
+      { src: 'https://picsum.photos/seed/screen1/600/600', alt: 'Crystal Clear Screen Protector' },
+      { src: 'https://picsum.photos/seed/screen2/600/600', alt: 'Screen Protector application' },
+    ],
+    tags: ['screen-protector', 'tempered-glass', 'protection'],
+    isNew: true,
+    rating: 4.6,
+    reviewCount: 567,
+    inStock: true,
+    features: [
+      '9H hardness tempered glass',
+      'Oleophobic fingerprint coating',
+      '99.9% clarity',
+      'Case-friendly design',
+      'Easy bubble-free installation',
+      '2-pack included',
+    ],
+  },
+  {
+    id: 'pa-004',
+    slug: 'car-phone-mount-magnetic',
+    name: 'Car Phone Mount Magnetic',
+    shortDescription: 'Universal magnetic dashboard mount with 360° rotation.',
+    description:
+      'Navigate with confidence using our Car Phone Mount Magnetic. The powerful N52 neodymium magnets securely hold your phone even on rough terrain, while the 360-degree rotation lets you find your perfect viewing angle. The universal design fits any car dashboard or windshield.',
+    price: 29.99,
+    compareAtPrice: 39.99,
+    category: 'phone-accessories',
+    images: [
+      { src: 'https://picsum.photos/seed/mount1/600/600', alt: 'Car Phone Mount Magnetic' },
+      { src: 'https://picsum.photos/seed/mount2/600/600', alt: 'Car Mount in use' },
+    ],
+    tags: ['car-mount', 'magnetic', 'universal'],
+    rating: 4.5,
+    reviewCount: 189,
+    inStock: true,
+    features: [
+      'N52 grade neodymium magnets',
+      '360° adjustable rotation',
+      'Universal compatibility',
+      'One-hand operation',
+      'Dashboard & windshield mount',
+      'Included metal plates',
+    ],
+  },
+  {
+    id: 'pa-005',
+    slug: 'portable-power-bank-20000mah',
+    name: 'Portable Power Bank 20000mAh',
+    shortDescription: '20000mAh with 65W PD fast charging and dual USB-A ports.',
+    description:
+      'Never run out of battery again with our Portable Power Bank 20000mAh. Featuring 65W Power Delivery fast charging, this powerhouse can charge your laptop, tablet, and phone simultaneously. The ultra-compact design belies its massive 20000mAh capacity, and the LED display keeps you informed of remaining power.',
+    price: 59.99,
+    compareAtPrice: 79.99,
+    category: 'phone-accessories',
+    images: [
+      { src: 'https://picsum.photos/seed/powerbank1/600/600', alt: 'Portable Power Bank 20000mAh' },
+      { src: 'https://picsum.photos/seed/powerbank2/600/600', alt: 'Power Bank ports detail' },
+    ],
+    tags: ['power-bank', 'charging', 'portable'],
+    isBestseller: true,
+    rating: 4.9,
+    reviewCount: 423,
+    inStock: true,
+    features: [
+      '20000mAh high-capacity',
+      '65W USB-C Power Delivery',
+      'Dual USB-A 18W outputs',
+      'LCD battery display',
+      'Pass-through charging',
+      'Airline carry-on approved',
+    ],
+  },
+  {
+    id: 'pa-006',
+    slug: 'bluetooth-earbuds-elite',
+    name: 'Bluetooth Earbuds Elite',
+    shortDescription: 'Active noise cancellation with 32-hour battery life.',
+    description:
+      'Immerse yourself in premium sound with our Bluetooth Earbuds Elite. Featuring advanced active noise cancellation technology, these earbuds block out the world so you can focus on what matters. The custom-tuned drivers deliver rich, detailed audio, while the 32-hour total battery life (8 hours + 24 hours case) keeps you going all day.',
+    price: 79.99,
+    compareAtPrice: 119.99,
+    category: 'phone-accessories',
+    images: [
+      { src: 'https://picsum.photos/seed/earbuds1/600/600', alt: 'Bluetooth Earbuds Elite' },
+      { src: 'https://picsum.photos/seed/earbuds2/600/600', alt: 'Earbuds case' },
+    ],
+    variants: {
+      type: 'Color',
+      options: [
+        { id: 'e-white', name: 'Color', value: 'Pearl White', inStock: true },
+        { id: 'e-black', name: 'Color', value: 'Midnight Black', inStock: true },
+        { id: 'e-sage', name: 'Color', value: 'Sage Green', inStock: true },
+      ],
+    },
+    tags: ['earbuds', 'bluetooth', 'anc', 'wireless'],
+    isNew: true,
+    rating: 4.7,
+    reviewCount: 156,
+    inStock: true,
+    features: [
+      'Hybrid active noise cancellation',
+      '32-hour total battery life',
+      'IPX5 water resistance',
+      'Multipoint Bluetooth 5.3',
+      'Transparency mode',
+      'Custom sound tuning',
+    ],
+  },
+  {
+    id: 'pa-007',
+    slug: 'phone-stand-adjustable',
+    name: 'Phone Stand Adjustable',
+    shortDescription: 'Premium aluminum desk stand with 270° angle adjustment.',
+    description:
+      'Keep your phone at the perfect viewing angle with our Phone Stand Adjustable. Crafted from aerospace-grade aluminum, this premium desk stand offers 270-degree angle adjustment and folds flat for travel. The non-slip silicone pads protect both your desk and your device.',
+    price: 24.99,
+    category: 'phone-accessories',
+    images: [
+      { src: 'https://picsum.photos/seed/stand1/600/600', alt: 'Phone Stand Adjustable' },
+      { src: 'https://picsum.photos/seed/stand2/600/600', alt: 'Phone Stand in use' },
+    ],
+    tags: ['stand', 'desk', 'aluminum'],
+    rating: 4.6,
+    reviewCount: 234,
+    inStock: true,
+    features: [
+      'Aerospace-grade aluminum',
+      '270° angle adjustment',
+      'Foldable for travel',
+      'Non-slip silicone pads',
+      'Universal compatibility',
+      'Cable management slot',
+    ],
+  },
+  {
+    id: 'pa-008',
+    slug: 'usb-c-fast-charging-cable-3pack',
+    name: 'USB-C Fast Charging Cable 3-Pack',
+    shortDescription: 'Braided nylon 100W USB-C cables in 1ft, 3ft, and 6ft lengths.',
+    description:
+      'Power up faster with our USB-C Fast Charging Cable 3-Pack. Each cable supports 100W fast charging and 10Gbps data transfer, wrapped in premium braided nylon that resists tangling and lasts 10x longer than standard cables. Includes 1ft, 3ft, and 6ft lengths for maximum versatility.',
+    price: 22.99,
+    category: 'phone-accessories',
+    images: [
+      { src: 'https://picsum.photos/seed/cable1/600/600', alt: 'USB-C Fast Charging Cable 3-Pack' },
+      { src: 'https://picsum.photos/seed/cable2/600/600', alt: 'Cable connector detail' },
+    ],
+    tags: ['cable', 'usb-c', 'fast-charge', 'braided'],
+    rating: 4.8,
+    reviewCount: 891,
+    inStock: true,
+    features: [
+      '100W fast charging support',
+      '10Gbps data transfer',
+      'Premium braided nylon',
+      '3 lengths: 1ft, 3ft, 6ft',
+      '10,000+ bend lifespan',
+      'Universal USB-C compatibility',
+    ],
+  },
+
+  // Home Decor
+  {
+    id: 'hd-001',
+    slug: 'minimalist-wall-clock-nordic',
+    name: 'Minimalist Wall Clock Nordic',
+    shortDescription: 'Scandinavian design wall clock with silent sweep mechanism.',
+    description:
+      'Transform your walls with our Minimalist Wall Clock Nordic. Inspired by Scandinavian design principles, this clock features a clean, uncluttered face with premium aluminum hands and a silent sweep mechanism that ensures undisturbed peace. The solid wood frame comes in three natural finishes to complement any interior.',
+    price: 89.99,
+    compareAtPrice: 119.99,
+    category: 'home-decor',
+    images: [
+      { src: 'https://picsum.photos/seed/clock1/600/600', alt: 'Minimalist Wall Clock Nordic' },
+      { src: 'https://picsum.photos/seed/clock2/600/600', alt: 'Wall Clock detail view' },
+      { src: 'https://picsum.photos/seed/clock3/600/600', alt: 'Wall Clock lifestyle' },
+    ],
+    variants: {
+      type: 'Finish',
+      options: [
+        { id: 'wc-oak', name: 'Finish', value: 'Natural Oak', inStock: true },
+        { id: 'wc-walnut', name: 'Finish', value: 'Dark Walnut', inStock: true },
+        { id: 'wc-white', name: 'Finish', value: 'White Ash', inStock: true },
+      ],
+    },
+    tags: ['wall-clock', 'nordic', 'minimalist', 'wood'],
+    isBestseller: true,
+    rating: 4.9,
+    reviewCount: 276,
+    inStock: true,
+    features: [
+      '30cm diameter',
+      'Silent sweep mechanism',
+      'Solid wood frame',
+      'Premium aluminum hands',
+      'Battery included',
+      '3 finish options',
+    ],
+  },
+  {
+    id: 'hd-002',
+    slug: 'ceramic-vase-set-3-piece',
+    name: 'Ceramic Vase Set (3-piece)',
+    shortDescription: 'Artisan-crafted ceramic vases in graduated sizes with matte finish.',
+    description:
+      'Add sculptural elegance to any room with our Ceramic Vase Set. This curated 3-piece set features artisan-crafted ceramic vases in graduated sizes (small, medium, large) with a sophisticated matte finish. Each piece is hand-thrown and individually glazed, meaning no two sets are exactly alike.',
+    price: 64.99,
+    compareAtPrice: 84.99,
+    category: 'home-decor',
+    images: [
+      { src: 'https://picsum.photos/seed/vase1/600/600', alt: 'Ceramic Vase Set 3-piece' },
+      { src: 'https://picsum.photos/seed/vase2/600/600', alt: 'Ceramic Vases detail' },
+    ],
+    variants: {
+      type: 'Color',
+      options: [
+        { id: 'vs-cream', name: 'Color', value: 'Cream White', inStock: true },
+        { id: 'vs-sage', name: 'Color', value: 'Sage Green', inStock: true },
+        { id: 'vs-terracotta', name: 'Color', value: 'Terracotta', inStock: false },
+      ],
+    },
+    tags: ['vase', 'ceramic', 'set', 'artisan'],
+    isNew: true,
+    rating: 4.7,
+    reviewCount: 143,
+    inStock: true,
+    features: [
+      'Set of 3 graduated sizes',
+      'Hand-thrown ceramic',
+      'Matte glazed finish',
+      'Waterproof interior',
+      'Unique artisan variations',
+      'Gift-ready packaging',
+    ],
+  },
+  {
+    id: 'hd-003',
+    slug: 'led-string-lights-warm',
+    name: 'LED String Lights Warm',
+    shortDescription: '10-meter warm white LED fairy lights with timer function.',
+    description:
+      'Create magical ambiance with our LED String Lights Warm. 100 individually mounted warm white LED bulbs on ultra-thin copper wire create a twinkling effect that transforms any space. The built-in timer function (6 hours on / 18 hours off) means you never have to remember to switch them off.',
+    price: 29.99,
+    category: 'home-decor',
+    images: [
+      { src: 'https://picsum.photos/seed/lights1/600/600', alt: 'LED String Lights Warm' },
+      { src: 'https://picsum.photos/seed/lights2/600/600', alt: 'LED Lights ambiance' },
+    ],
+    tags: ['lights', 'led', 'fairy-lights', 'ambiance'],
+    rating: 4.8,
+    reviewCount: 612,
+    inStock: true,
+    features: [
+      '10 meters / 100 LEDs',
+      'Warm white 2700K',
+      'Timer function included',
+      'Ultra-thin copper wire',
+      'USB powered',
+      '8 lighting modes',
+    ],
+  },
+  {
+    id: 'hd-004',
+    slug: 'scented-candle-luxury-set',
+    name: 'Scented Candle Luxury Set',
+    shortDescription: 'Soy wax candles with essential oil blends in gift box.',
+    description:
+      'Elevate your senses with our Scented Candle Luxury Set. This curated collection of 3 premium soy wax candles features hand-poured essential oil blends: Cedarwood & Vanilla, Sea Breeze & Eucalyptus, and Lavender & Chamomile. Each candle provides up to 45 hours of clean-burning, toxin-free fragrance.',
+    price: 44.99,
+    compareAtPrice: 59.99,
+    category: 'home-decor',
+    images: [
+      { src: 'https://picsum.photos/seed/candle1/600/600', alt: 'Scented Candle Luxury Set' },
+      { src: 'https://picsum.photos/seed/candle2/600/600', alt: 'Candle detail view' },
+    ],
+    tags: ['candle', 'scented', 'soy', 'luxury'],
+    isBestseller: true,
+    rating: 4.9,
+    reviewCount: 387,
+    inStock: true,
+    features: [
+      'Set of 3 candles',
+      '100% natural soy wax',
+      'Essential oil fragrance',
+      '45 hours burn time each',
+      'Reusable glass jar',
+      'Luxury gift box packaging',
+    ],
+  },
+  {
+    id: 'hd-005',
+    slug: 'throw-pillow-cover-boho',
+    name: 'Throw Pillow Cover Boho',
+    shortDescription: 'Handwoven cotton pillow covers with tassels in boho patterns.',
+    description:
+      'Add bohemian charm to your living space with our Throw Pillow Cover Boho. Each cover is handwoven by skilled artisans from 100% cotton with intricate geometric patterns and natural tassels. The hidden zipper closure makes swapping covers a breeze, and the durable weave maintains its beauty wash after wash.',
+    price: 34.99,
+    category: 'home-decor',
+    images: [
+      { src: 'https://picsum.photos/seed/pillow1/600/600', alt: 'Throw Pillow Cover Boho' },
+      { src: 'https://picsum.photos/seed/pillow2/600/600', alt: 'Pillow detail and texture' },
+    ],
+    variants: {
+      type: 'Pattern',
+      options: [
+        { id: 'pb-geo', name: 'Pattern', value: 'Geometric Sand', inStock: true },
+        { id: 'pb-tribal', name: 'Pattern', value: 'Tribal Rust', inStock: true },
+        { id: 'pb-diamond', name: 'Pattern', value: 'Diamond Cream', inStock: true },
+      ],
+    },
+    tags: ['pillow', 'boho', 'cotton', 'handwoven'],
+    rating: 4.6,
+    reviewCount: 198,
+    inStock: true,
+    features: [
+      '45x45cm size',
+      '100% handwoven cotton',
+      'Natural tassel detail',
+      'Hidden zipper closure',
+      'Machine washable',
+      'Insert not included',
+    ],
+  },
+  {
+    id: 'hd-006',
+    slug: 'bamboo-storage-basket',
+    name: 'Bamboo Storage Basket',
+    shortDescription: 'Sustainable bamboo basket with leather handles for elegant storage.',
+    description:
+      'Organize in style with our Bamboo Storage Basket. Hand-woven from sustainably sourced bamboo, this elegant storage solution features genuine leather handles and a natural linen liner. Perfect for organizing throws, towels, toys, or plants, it adds natural texture and warmth to any room.',
+    price: 39.99,
+    category: 'home-decor',
+    images: [
+      { src: 'https://picsum.photos/seed/basket1/600/600', alt: 'Bamboo Storage Basket' },
+      { src: 'https://picsum.photos/seed/basket2/600/600', alt: 'Basket in room setting' },
+    ],
+    variants: {
+      type: 'Size',
+      options: [
+        { id: 'bs-sm', name: 'Size', value: 'Small (25cm)', inStock: true },
+        { id: 'bs-md', name: 'Size', value: 'Medium (35cm)', inStock: true },
+        { id: 'bs-lg', name: 'Size', value: 'Large (45cm)', inStock: true },
+      ],
+    },
+    tags: ['basket', 'bamboo', 'storage', 'sustainable'],
+    rating: 4.7,
+    reviewCount: 164,
+    inStock: true,
+    features: [
+      'Sustainably sourced bamboo',
+      'Genuine leather handles',
+      'Natural linen liner',
+      '3 sizes available',
+      'Multi-purpose use',
+      'Eco-friendly production',
+    ],
+  },
+  {
+    id: 'hd-007',
+    slug: 'modern-table-lamp',
+    name: 'Modern Table Lamp',
+    shortDescription: 'Sculptural marble base table lamp with linen shade and dimmer.',
+    description:
+      'Illuminate your space with artistic flair using our Modern Table Lamp. The sculptural base is crafted from genuine Italian Carrara marble, topped with a hand-stitched natural linen shade that casts the most beautiful warm, diffused light. The integrated dimmer switch lets you set the perfect mood.',
+    price: 74.99,
+    compareAtPrice: 99.99,
+    category: 'home-decor',
+    images: [
+      { src: 'https://picsum.photos/seed/lamp1/600/600', alt: 'Modern Table Lamp' },
+      { src: 'https://picsum.photos/seed/lamp2/600/600', alt: 'Table Lamp detail' },
+      { src: 'https://picsum.photos/seed/lamp3/600/600', alt: 'Lamp light quality' },
+    ],
+    tags: ['lamp', 'marble', 'lighting', 'modern'],
+    isNew: true,
+    rating: 4.8,
+    reviewCount: 92,
+    inStock: true,
+    features: [
+      'Carrara marble base',
+      'Hand-stitched linen shade',
+      'Integrated dimmer switch',
+      '40cm height',
+      'E27 bulb compatible',
+      'LED bulb included',
+    ],
+  },
+  {
+    id: 'hd-008',
+    slug: 'abstract-canvas-art-print',
+    name: 'Abstract Canvas Art Print',
+    shortDescription: 'Gallery-wrapped canvas prints in curated abstract designs.',
+    description:
+      'Elevate your walls with our Abstract Canvas Art Print. Each piece is printed on premium gallery-wrapped canvas using archival inks that resist fading for over 75 years. The artwork is stretched over solid wood frames and arrives ready to hang. Choose from our curated collection of original abstract designs.',
+    price: 54.99,
+    category: 'home-decor',
+    images: [
+      { src: 'https://picsum.photos/seed/art1/600/600', alt: 'Abstract Canvas Art Print' },
+      { src: 'https://picsum.photos/seed/art2/600/600', alt: 'Art print in room' },
+    ],
+    variants: {
+      type: 'Design',
+      options: [
+        { id: 'ap-oceanic', name: 'Design', value: 'Oceanic Blue', inStock: true },
+        { id: 'ap-terracotta', name: 'Design', value: 'Desert Terracotta', inStock: true },
+        { id: 'ap-forest', name: 'Design', value: 'Forest Botanics', inStock: true },
+        { id: 'ap-mono', name: 'Design', value: 'Monochrome Lines', inStock: true },
+      ],
+    },
+    tags: ['art', 'canvas', 'abstract', 'wall-art'],
+    rating: 4.8,
+    reviewCount: 203,
+    inStock: true,
+    features: [
+      '50x70cm gallery size',
+      'Premium canvas material',
+      'Archival ink printing',
+      '75+ year fade resistance',
+      'Solid wood frame',
+      'Ready to hang',
+    ],
+  },
+];
+
+export const collections: Collection[] = [
+  {
+    id: 'col-001',
+    slug: 'phone-accessories',
+    name: 'Phone Accessories',
+    description: 'Premium accessories to enhance your mobile experience.',
+    image: 'https://picsum.photos/seed/phonecol/800/600',
+    productCount: 8,
+  },
+  {
+    id: 'col-002',
+    slug: 'home-decor',
+    name: 'Home Decor',
+    description: 'Curated pieces to transform your living space.',
+    image: 'https://picsum.photos/seed/homedeccol/800/600',
+    productCount: 8,
+  },
+];
+
+export function getProductBySlug(slug: string): Product | undefined {
+  return products.find((p) => p.slug === slug);
+}
+
+export function getProductsByCategory(category: 'phone-accessories' | 'home-decor'): Product[] {
+  return products.filter((p) => p.category === category);
+}
+
+export function getBestsellers(): Product[] {
+  return products.filter((p) => p.isBestseller);
+}
+
+export function getFeaturedProducts(): Product[] {
+  return products.slice(0, 4);
+}
